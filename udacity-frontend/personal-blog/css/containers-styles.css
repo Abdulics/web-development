@@ -1,0 +1,42 @@
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f6f7;
+  padding-top: 150px;
+  align-items: center;
+}
+
+.container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: 3% 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:
+      "hd hd hd hd"
+      "tp tp tp tp"
+      "cd cd cd s"
+      "sc sc sc sc"
+      "a-us a-us a-us cu"
+      "ft ft ft ft";
+    line-height: 30px;
+  }
+
+  .post-container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 0.25fr;
+    grid-template-rows: 3% 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:
+      "hd hd"
+      "bt bt"
+      "p au"
+      "pnp pnp"
+      "c c"
+      "r r"
+      "sc sc"
+      "a-us cu"
+      "ft ft";
+  }
+
+  

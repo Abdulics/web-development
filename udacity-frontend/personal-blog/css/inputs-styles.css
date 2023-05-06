@@ -1,0 +1,26 @@
+form {
+  width: 100%;
+  text-align: center;
+}
+
+input[type="submit"] {
+  width: 70%;
+  padding: 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #62cdff;
+  color: white;
+  border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+input[type="email"], input[type="text"] {
+  width: 30%;
+  padding: 15px;
+  border-radius: 10px;
+}

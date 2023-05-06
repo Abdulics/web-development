@@ -1,0 +1,126 @@
+@import "./containers-styles.css";
+@import "./header-style.css";
+@import "./icons-footer.css";
+@import "./inputs-styles.css";
+
+.top {
+  grid-area: tp;
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.intro {
+  color: grey;
+  line-height: 30px;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.card {
+  grid-area: cd;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 16px;
+  background-color: #f6f7f8;
+}
+
+.card .card-p {
+  width: 80%;
+  max-width: 320px;
+  object-fit: cover;
+}
+
+.card-p {
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.card-h {
+  color: blueviolet;
+  font-size: larger;
+}
+.c-date {
+  color: gray;
+}
+.card-tittle {
+  line-height: 1;
+}
+
+
+.side {
+  grid-area: s;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  max-height: 600px;
+  padding-right: 20px;
+}
+
+.side-p {
+  text-align: center;
+  width: 100%;
+  padding: 15px;
+}
+
+.heading {
+  background-color: #62cdff;
+  padding: 15px;
+  text-align: center;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.fa {
+  width: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+  .container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: 3% 0.25fr 0.34fr 0.25fr 0.25fr;
+    grid-template-areas:
+      "hd hd hd hd"
+      "tp tp tp tp"
+      "s s s s"
+      "cd cd cd cd"
+      "sc sc sc sc"
+      "a-us a-us a-us a-us"
+      "cu cu cu cu"
+      "ft ft ft ft";
+
+    line-height: 25px;
+  }
+}
+
+@media (min-width: 501px) {
+  body {
+    padding-top: 0px;
+  }
+}

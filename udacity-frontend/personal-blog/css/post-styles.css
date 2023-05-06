@@ -1,0 +1,176 @@
+@import "./header-style.css";
+@import "./icons-footer.css";
+@import "./containers-styles.css";
+@import "./inputs-styles.css";
+
+* {
+  box-sizing: border-box;
+}
+
+hr.solid {
+  border-top: 3px solid #bbb;
+}
+
+h4 {
+  font-style: italic;
+}
+
+.blog-tittle {
+  grid-area: bt;
+  padding: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.post {
+  grid-area: p;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.about-author {
+  grid-area: au;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 285px;
+  background-color: #eeefeb;
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  line-height: 25px;
+}
+
+img {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  float: right;
+  margin-left: auto;
+}
+
+.c-date {
+  color: gray;
+}
+
+.blog-sub-tittle {
+  text-align: left;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.prev-next-post-buttons {
+  grid-area: pnp;
+}
+
+.previous .next {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.previous {
+  float: left;
+  padding: 10px;
+  margin-left: 20%;
+  background-color: white;
+  color: black;
+  border: 2px solid #62cdff;
+  border-radius: 20px;
+}
+
+.previous:hover {
+  background-color: #62cdff;
+  color: white;
+}
+
+.next {
+  float: right;
+  padding: 10px;
+  margin-right: 20%;
+  background-color: white;
+  color: black;
+  border: 2px solid #62cdff;
+  border-radius: 20px;
+}
+
+.next:hover {
+  background-color: #62cdff;
+  color: white;
+}
+
+.comments {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.replies {
+  grid-area: r;
+  padding: 15px;
+}
+
+input[type="email"], input[type="text"], textarea
+ {
+  width: 70%;
+}
+
+.fa {
+  width: 35px;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+  .post-container {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 0.25fr;
+    grid-template-rows: auto 0.08fr 0.1fr 0.13fr 0.25fr 0.15fr 0.25fr 0.25fr 0.2fr 0.25fr;
+    grid-template-areas:
+      "hd hd"
+      "hd hd"
+      "bt bt"
+      "au au"
+      "p p"
+      "pnp pnp"
+      "c c"
+      "r r"
+      "sc sc"
+      "a-us a-us"
+      "cu cu"
+      "ft ft";
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 501px) {
+  body {
+    padding-top: 0px;
+  }
+}
