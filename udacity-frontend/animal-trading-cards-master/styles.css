@@ -1,0 +1,47 @@
+/* add your CSS here */
+* {
+    box-sizing: border-box;
+  }
+
+img {
+    width: 300px;
+    height: 220px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bcard {
+    max-width: 330px;
+    max-height: 680px;
+    border: 1px solid #e7e4e4;
+    box-shadow: 8px 8px #e7e4e4;
+    margin: 0 auto;
+    filter: blur(0.6px);
+}
+
+.scard {
+    padding: 15px;
+    border: 1px solid #e7e4e4;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 300px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.fact {
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+span {
+    font-weight: bold;
+}
+
+h3 {
+    padding-left: 1rem;
+}

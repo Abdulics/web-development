@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "portofolio",
+			"path": "../../Bootstrap/portofolio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Udacity-frontend",
+		"html.format.enable": true
+	}
+}
