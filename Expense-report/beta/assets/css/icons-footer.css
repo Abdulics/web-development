@@ -1,24 +1,4 @@
 
-
-.contact-us {
-    grid-area: cu;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    text-align: center;
-    color: grey;
-  }
-  
-  .subscribe {
-    display: flex;
-    grid-area: sc;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-
 .about-us {
     grid-area: a-us;
     display: flex;
@@ -29,6 +9,15 @@
     margin: 0 auto;
     padding: 20px 10px;
     color: grey;
+    background-color: rgb(227, 244, 244);
+  }
+
+  .contact-us {
+    grid-area: cu;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: grey;
+    background-color: rgb(248, 246, 244);
   }
   
   .fa {
@@ -76,6 +65,6 @@
   
   footer {
     grid-area: ft;
-    background-color: #97deff;
+    background-color: rgb(216, 125, 34);
     text-align: center;
   }
