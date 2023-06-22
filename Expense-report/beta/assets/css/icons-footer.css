@@ -1,5 +1,5 @@
 
-.about-us {
+  .about-us {
     grid-area: a-us;
     display: flex;
     flex-direction: row;
@@ -17,7 +17,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     color: grey;
-    background-color: rgb(248, 246, 244);
+    background-color: rgb(227, 244, 244);
   }
   
   .fa {
@@ -64,7 +64,12 @@
   }
   
   footer {
-    grid-area: ft;
-    background-color: rgb(216, 125, 34);
-    text-align: center;
+      grid-area: ft;
+      background-color: rgb(248, 246, 244);
+      text-align: center;
+      /* position: fixed; */
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
   }
