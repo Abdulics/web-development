@@ -1,0 +1,55 @@
+
+body {
+    height: 100vh;
+    font-family: sans-serif;
+    background: url(../images/todo-list-seamless.webp)
+     no-repeat center center/ cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* .main-content {
+  } */
+
+  .main-content .enter-tasks {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(247, 241, 241);
+    border-radius: 15px;
+    width: 400px;
+  }
+
+  .enter-tasks input {
+    margin: 15px;
+    padding: 4px;
+    width: 260px;
+    border-radius: 5px;
+  }
+
+  /* .plus-btn {
+    
+    background-color: green;
+    color: white;
+  } */
+
+  .plus-btn button {
+    color: #ffff;
+    background-color: green;
+    padding: 5px;
+    width: 70px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: rgb(10, 169, 31);
+    opacity: 0.9;
+  }
+  
+  /* .display-tasks {
+
+  } */
+
+
+
