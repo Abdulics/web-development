@@ -6,3 +6,5 @@ function myFunc() {
     countEl.innerText = count;
     console.log("Button clicked");
 }
+
+alert('what');
