@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', NavBar, false); 
+//document.addEventListener('DOMContentLoaded', createMenu, false); 
 document.addEventListener('DOMContentLoaded', ActiveSection, false); 
 document.addEventListener('DOMContentLoaded', ActiveNavBar, false); 
 document.addEventListener('DOMContentLoaded', SmallMenu, false); 
@@ -21,6 +22,29 @@ function NavBar (){
 		});
 	};
 }
+
+const createMenu = () => {
+	const navbarList = document.getElementById("navbar__list");
+	for (let i = 0; i < sections.length; i++) {
+	  const section = sections[i].getAttribute("data-nav");
+	  const parsedSection = section.replace(/\s/g, "");
+	  const link = document.createElement("a");
+	  const li = document.createElement("li");
+  
+	  link.setAttribute("href", "#" + parsedSection);
+	  link.setAttribute("id", "link" + (i + 1));
+	  link.innerText = parsedSection;
+  
+	  li.appendChild(link);
+	  navbarList.appendChild(li);
+  
+	  document
+		.getElementById("link" + (i + 1))
+		.addEventListener("click", (event) => {
+		  scroll(i + 1, event);
+		});
+	}
+  };
 
 // Make the current section (at the top of viewport) active 
 function ActiveSection (){

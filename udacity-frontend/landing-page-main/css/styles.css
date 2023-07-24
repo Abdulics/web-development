@@ -65,13 +65,17 @@ section {
 
 /* Navigation Styles*/
 .navbar__menu ul {
-    padding-left: 0;
+    padding-left: 100;
     margin: 0;
     text-align: right;
 }
 
 .navbar__menu li {
+    padding: 20px;
     display: inline-block;
+	background-color: rgb(87, 119, 105);
+	font-weight: bolder;
+	text-decoration: none;
 }
 
 .navbar__menu .menu__link {
@@ -86,6 +90,18 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+/* Active Class in NavBar */
+#navbar__list a:hover {
+    color: rgb(72, 70, 199);
+}
+
+a {
+    text-decoration: none;
+}
+#navbar__list li.active{
+	background-color:#24d4d4;
 }
 
 /* Header Styles */
