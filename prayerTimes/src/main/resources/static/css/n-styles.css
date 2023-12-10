@@ -1,0 +1,167 @@
+body {
+    background-color: #f2f2f2;
+}
+.boxCard {
+    border-radius: 10px;
+    height: auto;
+    background-color: #fff;
+    margin-top: 75px;
+    padding: 10px
+}
+
+.boxCard-lg {
+    width: 100%
+}
+
+.boxCard-title {
+    font-size: 1.37rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px
+}
+
+.boxCard-body {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 20px
+}
+
+.d-flex {
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important
+}
+
+.prayerTiles {
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    width: 70px!important;
+    height: 70px!important;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 70px
+}
+
+.prayerTiles p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle
+}
+
+.prayerTiles span {
+    display: block
+}
+
+.prayerTiles .prayername {
+    font-size: .69rem;
+    font-weight: 700
+}
+
+.prayerTiles .prayertime {
+    font-size: .8rem;
+    font-weight: 300;
+    direction: ltr
+}
+
+.prayerTiles .pt-timer {
+    font-size: 1.37rem;
+    font-weight: 700
+}
+
+.prayerTiles:active,.prayerTiles:focus {
+    outline: 0
+}
+
+.fajar {
+    background-image: url(../images/fajr.png)
+}
+
+.dhuhar {
+    background-image: url(../images/dhuhr.png)
+}
+
+.asr {
+    background-image: url(../images/asr.png)
+}
+
+.maghrib {
+    background-image: url(../images/maghrib.png)
+}
+
+.isha {
+    background-image: url(../images/isha.png)
+}
+
+.sunrise {
+    background-image: url(../images/fajr.png)
+}
+
+.pt-card-tiles {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.pt-card-tiles .slick-list .slick-track {
+    left: 10px!important
+}
+
+.ptcard-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.ptcard-footer em {
+    font-size: 21px;
+    margin-top: 5px
+}
+
+.pt-card-header {
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    position: relative
+}
+
+.pt-center-spacer {
+    min-width: 2rem;
+    min-height: 3rem
+}
+
+.pt-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .5rem
+}
+
+.pt-date .pt-date-right {
+    position: absolute;
+    right: 0
+}
+
+.boxCard-title {
+    font-size: 1.37rem;
+    font-weight: 700;
+    color: #000;
+    line-height: 24px
+}
+
+.font-dark {
+    color: #000
+}
+
+.font-sm {
+    font-size: .8rem
+}
+.font-weight-bold {
+    font-weight: 700!important
+}
+
+.con {
+    background-color: #f2f2f2;
+}

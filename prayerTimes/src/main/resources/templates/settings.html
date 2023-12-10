@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Prayer Times Form</title>
+</head>
+<body>
+<div class="container">
+    <h1>Prayer Times Form</h1>
+    <form th:action="@{/submitForm}" method="post">
+        <div class="mb-3">
+            <label for="date" class="form-label">Date</label>
+            <input type="text" class="form-control" id="date" name="date" placeholder="YYYY-MM-DD">
+        </div>
+
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="showEntireMonth" name="showEntireMonth">
+            <label class="form-check-label" for="showEntireMonth">Show entire month</label>
+        </div>
+
+        <div class="mb-3">
+            <label for="latitude" class="form-label">Latitude</label>
+            <input type="text" class="form-control" id="latitude" name="latitude" placeholder="Latitude">
+        </div>
+
+        <div class="mb-3">
+            <label for="longitude" class="form-label">Longitude</label>
+            <input type="text" class="form-control" id="longitude" name="longitude" placeholder="Longitude">
+        </div>
+
+        <div class="mb-3">
+            <label for="timezone" class="form-label">Timezone</label>
+            <input type="text" class="form-control" id="timezone" name="timezone" placeholder="Timezone">
+        </div>
+
+        <div class="mb-3">
+            <label for="calculationMethod" class="form-label">Calculation Method</label>
+            <select class="form-select" id="calculationMethod" name="calculationMethod">
+                <option selected>Select Calculation Method</option>
+                <option value="0">Jafari - Ithna Ashari.</option>
+                <option value="1">Karachi - University of Islamic Sciences.</option>
+                <option value="2">ISNA - Islamic Society of North America.</option>
+                <option value="3">MWL - Muslim World League.</option>
+                <option value="4">Mecca - Umm al-Qura.</option>
+                <option value="5">Egyptian General Authority of Survey.</option>
+                <option value="6">Custom Setting.</option>
+                <option value="7">University of Tehran - Institute of Geophysics.</option>
+                <option value="8">Algerian Minister of Religious Affairs and Wakfs.</option>
+                <option value="9">Gulf 90 Minutes Fixed Isha.</option>
+                <option value="10">Egyptian General Authority of Survey (Bis).</option>
+                <option value="11">UOIF - Union Des Organisations Islamiques De France.
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="juristic" class="form-label">Juristic Method</label>
+            <select class="form-select" id="calculationMethod" name="calculationMethod">
+                <option selected>Select Juristic Method</option>
+                <option value="0">Standard (Shafi, Hanbli, Maliki).</option>
+                <option value="1">Hanafi.</option>
+                
+            </select>
+        </div>
+
+        <!-- Add more fields for high_latitude, time_format, fajir_angle, maghrib_rule, maghrib_value, isha_rule, isha_value, etc. -->
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+</html>

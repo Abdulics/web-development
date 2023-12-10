@@ -47,6 +47,7 @@ const createMenu = () => {
   }
 };
 
+//MAking section active
 const activateSectionOnScroll = () => {
   window.addEventListener("scroll", () => {
     const sectionContainers = document.querySelectorAll("section");

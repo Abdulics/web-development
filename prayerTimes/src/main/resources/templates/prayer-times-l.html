@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CDN links -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+     <!-- Custom CSS link -->
+    <link rel="stylesheet" href="/css/n-styles.css">
+    <title>Prayer Times</title>
+</head>
+<body>
+    <div class="container-fluid">
+
+        <div class="boxCard text-center pt-container">
+            <div class="pt-card-header">
+
+                <div class="boxCard-title">
+
+                    <h1 class=" mb-1" th:text="'Prayer Times in: ' + ${settings.location.city}
+                            + ' ' + ',' + ${settings.location.state} 
+                            + ' ' + ',' +${settings.location.country}" 
+                    ></h1>
+                </div>
+
+                <div class="pt-date font-dark font-sm">
+                    <p th:text=" ${#dates.format(#dates.createNow(), 'MMMM d, yyyy')}">December 9, 2023</p>
+                    <p class="font-weight-bold pt-date-right">24&nbsp;Jumada Al-Awwal,&nbsp;1445</p>
+                </div>
+
+            </div>
+
+            <div class="pt-card-tiles row">
+
+                <div class="prayerTiles fajar-tile col">
+                    <p>
+                        <span class="prayername">Fajr</span> 
+                        <span class="prayertime" th:text="${results.fajr.replace('%', '')}"></span>
+                    </p>
+                    
+                </div>
+
+                <div class="prayerTiles sunrise-tile col">
+                    <p>
+                        <span class="prayername">Sunrise  </span>  
+                        <span class="prayertime">07:36 AM</span>
+                    </p>
+                </div>
+
+                <div class="prayerTiles dhuhar-tile col">
+                    <p>
+                        <span class="prayername">Dhuhr</span> 
+                        <span class="prayertime" th:text="${results.dhuhr.replace('%', '')}"></span>
+                    </p>
+                </div>
+
+                <div class="prayerTiles asr-tile col">
+                    <p>
+                        <span class="prayername">Asr</span>
+                        <span class="prayertime" th:text="${results.asr.replace('%', '')}"></span>
+                    </p>
+                </div>
+
+                <div class="prayerTiles maghrib-tile col">
+                    <p>
+                        <span class="prayername">Maghrib</span> 
+                        <span class="prayertime" th:text=" ${results.maghrib.replace('%', '')}"></span>
+                    </p>
+                </div>
+
+                <div class="prayerTiles isha-tile col">
+                    <p>
+                        <span class="prayername">Isha</span>
+                        <span class="prayertime" th:text="${results.isha.replace('%', '')}"></span>
+                    </p>
+                </div>
+
+                <div class="ptcard-footer">
+                    <p>The footer here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

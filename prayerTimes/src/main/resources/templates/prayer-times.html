@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your head content here -->
+    <!-- Bootstrap CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Custom CSS link -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Islam</title>
+</head>
+<body>
+
+   <!-- Your existing content goes here -->
+   <div class="boxCard boxCard-lg" id="prayertimes-card">
+                <div class="pt-card-header">
+                        <div class="d-flex flex-column">
+                            <h1 class="boxCard-title mb-1" th:text="'Prayer Times in: ' + ${settings.location.city}
+                            + ' ' + ',' + ${settings.location.state} 
+                            + ' ' + ',' +${settings.location.country}" 
+                            ></h1>
+                            <a href="/world/" class="font-primary font-sm change-loc gtm-pt-chloc">Wrong Location?</a>
+                        </div>
+
+                        <div class="pt-date font-dark font-sm">
+                            <p th:text=" ${#dates.format(#dates.createNow(), 'MMMM d, yyyy')}"></p>
+
+                            <p class="font-weight-bold pt-date-right">24&nbsp;Jumada Al-Awwal,&nbsp;1445</p>
+                        </div>
+
+                </div>
+
+                    <div class="pt-card-tiles d-flex slick-initialized slick-slider" dir="">
+
+                    <div class="slick-list draggable">
+                        <div class="slick-track" style="opacity: 1; width: 30000px; transform: translate3d(-10px, 0px, 0px);">
+                            <div class="prayerTiles fajar-tile pt-active fajar slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername ">Upcoming Prayer<br>Fajr</span><span class="pt-timer" id="clockdiv">09:35:08</span>
+                            <span class="prayertime">06:15 AM</span><span class="pt-timer" id="clockdiv"></span>
+                        </p><a class="btn-refresh" href="./" style="opacity: 0;" tabindex="0"><img alt="refresh" src="/static/live180/themes/theme20/images/refresh-btn.png"></a>
+                    </div>
+
+                    <div class="prayerTiles sunrise-tile slick-slide slick-active" data-slick-index="1" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername">Sunrise  </span>  
+                            <span class="prayertime">07:36 AM</span>
+                        </p>
+                    </div>
+                    <div class="prayerTiles dhuhar-tile slick-slide slick-active" data-slick-index="2" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername">Dhuhr</span> 
+                            <span class="prayertime" th:text="${results.dhuhr.replace('%', '')}"></span>
+                        </p>
+                    </div>
+                    <div class="prayerTiles asr-tile slick-slide slick-active" data-slick-index="3" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername">Asr</span>
+                            <span class="prayertime" th:text="'Asr: ' + ${results.asr.replace('%', '')}"></span>
+                        </p>
+                    </div>
+                    <div class="prayerTiles maghrib-tile slick-slide slick-active" data-slick-index="4" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername">Maghrib</span> 
+                            <span class="prayertime" th:text="'Maghrib: ' + ${results.maghrib.replace('%', '')}"></span>
+                        </p>
+                    </div>
+                    <div class="prayerTiles isha-tile slick-slide slick-active" data-slick-index="5" aria-hidden="false" tabindex="0">
+                        <p>
+                            <span class="prayername">Isha</span>
+                            <span class="prayertime" th:text="'Isha: ' + ${results.isha.replace('%', '')}"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+
+    <script type="text/template" id="timer-template"><span class="pt-timer" id="clockdiv"></span></script>
+    <script type="text/template" id="btn-refresh-template"><a class="btn-refresh" href="./"><img alt="refresh" src="/static/live180/themes/theme20/images/refresh-btn.png"></img></a></script>
+
+    <div class="ptcard-footer">
+        <div class="d-flex pt-more">
+            <div class="pt-info">
+            <!-- Static CityId for London = 2643743 -->
+                <p class="font-sm font-dark">Islamic Society of North America &nbsp;<a class="font-primary font-sm font-weight-bold underline-hover settingsOpener gtm-pt-settings" title="Click here to change settings">Change</a>	</p>
+            <p class="font-xs font-muted">
+                        Fajr&nbsp;15.0&nbsp;degrees,&nbsp;Isha&nbsp;15.0&nbsp;degrees,&nbsp;Hanbali, Maliki, Shafi
+                                &nbsp;<span class="glyphter icon-info cal-method-info" data-toggle="modal" data-target="#cal-method-info"></span>
+                    </p>
+                </div>
+
+            
+        </div>
+        <a href="/widgets/#prayertimeswidget" class="font-primary font-sm align-self-end font-weight-bold underline-hover gtm-pt-embed" title="Embed Prayer times on your website or blog">Embed to your website</a>
+        </div>
+    </div>
+
+    
+    
+    <!-- Add more Thymeleaf expressions based on your requirements -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
